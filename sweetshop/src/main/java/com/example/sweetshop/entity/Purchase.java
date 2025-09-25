@@ -1,42 +1,31 @@
 package com.example.sweetshop.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Purchase {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "user_id") // Optional but good practice
     private User user;
 
     @ManyToOne
+    @JoinColumn(name = "sweet_id") // Optional but good practice
     private Sweet sweet;
 
     private Integer quantity;
-    // No-arg constructor
-    public Purchase() {}
-
-    // Parameterized constructor
-    public Purchase(User user, Sweet sweet, Integer quantity) {
-        this.user = user;
-        this.sweet = sweet;
-        this.quantity = quantity;
-    }
-
-    // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
-    public User getUser() { return user; }
-    public void setUser(User user) { this.user = user; }
-
-    public Sweet getSweet() { return sweet; }
-    public void setSweet(Sweet sweet) { this.sweet = sweet; }
-
-    public Integer getQuantity() { return quantity; }
-    public void setQuantity(Integer quantity) { this.quantity = quantity; }
 }

@@ -1,10 +1,19 @@
 package com.example.sweetshop.entity;
 
-import io.jsonwebtoken.Claims;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 
 @Entity
-@Table(name = "users")  // lowercase for H2
+@Table(name = "users")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class User {
 
     @Id
@@ -18,35 +27,9 @@ public class User {
 
     private String password;
 
-    public Boolean isAdmin = false;
+    private Boolean isAdmin = false;
 
-    // No-arg constructor
-    public User() {}
-
-    // Parameterized constructor
-    public User(String name, String email, String password, Boolean isAdmin) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.isAdmin = isAdmin;
-    }
-
-    // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-
-    public String getPassword() { return password; }
-    public void setPassword(String password) { this.password = password; }
-
-    public Boolean getIsAdmin() { return isAdmin; }
-    public void setIsAdmin(Boolean isAdmin) { this.isAdmin = isAdmin; }
-
+    // You can keep custom methods if they provide additional logic
     public boolean isAdmin() {
         return this.isAdmin;
     }

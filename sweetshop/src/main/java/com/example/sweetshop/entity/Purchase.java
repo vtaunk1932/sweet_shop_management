@@ -10,8 +10,8 @@ import lombok.ToString;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor // Keep this
+@AllArgsConstructor // Keep this
 @ToString
 public class Purchase {
 
@@ -20,12 +20,17 @@ public class Purchase {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id") // Optional but good practice
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "sweet_id") // Optional but good practice
+    @JoinColumn(name = "sweet_id")
     private Sweet sweet;
 
     private Integer quantity;
+    public Purchase(User user, Sweet sweet, Integer quantity) {
+        this.user = user;
+        this.sweet = sweet;
+        this.quantity = quantity;
+    }
 }

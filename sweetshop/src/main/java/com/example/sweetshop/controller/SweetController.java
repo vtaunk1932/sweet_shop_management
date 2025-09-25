@@ -66,6 +66,7 @@ public class SweetController {
 
     @GetMapping("/search")
     public ResponseEntity<List<Sweet>> searchSweets(
+            //hy
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String category,
             @RequestParam(required = false) Double minPrice,

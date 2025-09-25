@@ -8,6 +8,8 @@ import com.example.sweetshop.repository.SweetRepository;
 import com.example.sweetshop.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.NoSuchElementException;
+
 @Service
 public class PurchaseService {
 
@@ -21,24 +23,21 @@ public class PurchaseService {
         this.userRepository = userRepository;
     }
 
-    // Intentionally buggy method for RED stage
     public Purchase createPurchase(Long userId, Long sweetId, int quantity) {
-        // Mistake 1: Using get() without checking presence → NoSuchElementException
-        User user = userRepository.findById(userId).get();
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new NoSuchElementException("User not found"));
+        Sweet sweet = sweetRepository.findById(sweetId)
+                .orElseThrow(() -> new NoSuchElementException("Sweet not found"));
 
-        // Mistake 2: Using wrong repository method (findAll instead of findById)
-        Sweet sweet = sweetRepository.findAll().get(0);
-
-        // Mistake 3: Wrong logic for stock check (inverted condition)
-        if (sweet.getQuantity() > quantity) {
+        if (sweet.getQuantity() < quantity) {
             throw new IllegalArgumentException("Insufficient sweet stock");
         }
 
-        // Mistake 4: Forgetting to update sweet quantity → stock won’t reduce
+        sweet.setQuantity(sweet.getQuantity() - quantity);
+        sweetRepository.save(sweet);
 
-        // Mistake 5: Passing null for user in purchase (runtime failure)
-        Purchase purchase = new Purchase(null, sweet, quantity);
-
+        Purchase purchase = new Purchase(user, sweet, quantity);
         return purchaseRepository.save(purchase);
     }
 }
+

@@ -22,9 +22,8 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody User user) {
         try {
-            // No password encoding, just storing raw password
             User savedUser = userService.registerUser(user);
-            return ResponseEntity.ok(savedUser); // returning user with plain password
+            return ResponseEntity.ok(savedUser);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Registration failed: " + e.getMessage());
         }
@@ -33,15 +32,12 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
         try {
-            // If user not found → NullPointerException
             User user = userService.findByEmail(loginRequest.getEmail());
 
-            // Plain text password check (insecure)
             if (!user.getPassword().equals(loginRequest.getPassword())) {
                 return ResponseEntity.status(401).body("Invalid credentials");
             }
 
-            // Returning raw token string (not JSON object)
             String token = jwtUtil.generateToken(user);
             return ResponseEntity.ok(token);
         } catch (Exception e) {

@@ -1,4 +1,7 @@
 package com.example.sweetshop.repository;
 
-public interface PurchaseRepository {
+import com.example.sweetshop.entity.Purchase;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PurchaseRepository extends JpaRepository<Purchase, Long> {
 }

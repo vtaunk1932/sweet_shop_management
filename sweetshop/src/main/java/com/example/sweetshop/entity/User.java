@@ -29,7 +29,13 @@ public class User {
 
     private Boolean isAdmin = false;
 
-    // You can keep custom methods if they provide additional logic
+    public User(String name, String email, String password, boolean isAdmin) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.isAdmin = isAdmin;
+    }
+
     public boolean isAdmin() {
         return this.isAdmin;
     }

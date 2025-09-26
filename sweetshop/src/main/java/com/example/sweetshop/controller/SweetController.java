@@ -53,7 +53,6 @@ public class SweetController {
     }
 
     @PostMapping("/{id}/purchase")
-    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<Sweet> purchaseSweet(@PathVariable Long id, @RequestParam int quantity) {
         return ResponseEntity.ok(sweetService.purchaseSweet(id, quantity));
     }

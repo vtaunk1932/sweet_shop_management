@@ -31,4 +31,13 @@ public class Sweet {
     private Double price;
 
     private Integer quantity;
+
+    // Custom constructor for quick object creation
+    public Sweet(String name, String category, String description, double price, int quantity) {
+        this.name = name;
+        this.category = category;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+    }
 }

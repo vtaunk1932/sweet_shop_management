@@ -1,19 +1,14 @@
-# 🍬 SweetShop – Full Stack Application
+# SweetShop – Full Stack Application
 
 ## 📌 Project Overview
 SweetShop is a full-stack web application built using **Spring Boot (backend)** and **React (frontend)**.  
-It allows users to browse sweets, place orders, and manage purchases.  
-The project demonstrates **REST API integration, database management, and frontend-backend communication**.  
+Sweet shop management, supporting customer browsing, purchasing, and admin inventory control. Features user authentication, real-time sweet availability, and an admin dashboard for CRUD operations on sweets.
 
----
-
-## 🚀 Features
-- User registration & login  
-- Browse sweets catalog  
-- Place and track orders  
-- Admin can add/update sweets  
-- Persistent storage using MySQL  
-
+**Key Features:**
+- User registration & login
+- Dashboard with sweets listing, search, filter, and purchase
+- Admin panel for adding, editing, and deleting sweets
+- Responsive, creative UI and Persistent storage using MySQL 
 ---
 
 ## 🛠️ Tech Stack
@@ -28,7 +23,43 @@ The project demonstrates **REST API integration, database management, and fronte
 ### ✅ Prerequisites
 - [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html) (>= 17)  
 - [Maven](https://maven.apache.org/)  
-- [MySQL](https://dev.mysql.com/downloads/)  
+- [MySQL](https://dev.mysql.com/downloads/)
+- ## Getting Started
+
+### Backend Setup
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/sweet_shop_management.git
+   ```
+2. Install dependencies:
+   ```
+   cd sweet_shop_management
+   npm install
+   ```
+3. Configure environment variables:
+   - Copy `.env.example` to `.env` and set your values.
+
+4. Run the backend server:
+   ```
+   npm start
+   ```
+
+### Frontend Setup
+1. Clone the frontend repo:
+   ```
+   git clone https://github.com/vtaunk1932/sweet_management_shop_frontend.git
+   ```
+2. Install dependencies:
+   ```
+   cd sweet_management_shop_frontend
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm start
+   ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the app.  
 
 ---
 ## 📸 Screenshots

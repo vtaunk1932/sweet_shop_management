@@ -33,29 +33,32 @@ The project demonstrates **REST API integration, database management, and fronte
 ---
 ## 📸 Screenshots
 
-### 🏠 Homepage
-![Homepage](./images/HomePage.png)
+# SweetShop
 
-### 🔐 Login Page
-![Login](./images/Login_page.png)
+## 🏠 Homepage
+![HomePage](sweetshop/images/HomePage.png)
 
-### 📝 Sign Up Page
-![SignUp](./images/SignUp.png)
+## 🔒 Login Page
+![Login](sweetshop/images/Login_page.png)
 
-### 🍬 Sweet Categories
-![Sweet Categories](./images/Sweet_Categories.png)
+## 📝 Sign Up Page
+![SignUp](sweetshop/images/SignUp.png)
 
-### ➕ Add Sweet (Admin)
-![Add Sweet](./images/Add_Sweet.png)
+## 🍬 Sweet Categories
+![Sweet Categories](sweetshop/images/Sweet_Categories.png)
 
-### 👨‍💼 Admin Dashboard
-![Admin Dashboard](./images/Admin_DashBoard.png)
+## ➕ Add Sweet (Admin)
+![Add Sweet](sweetshop/images/Add_Sweet.png)
 
-### 👤 User Dashboard
-![User Dashboard](./images/User_Dashboard.png)
+## 🧑‍💼 Admin Dashboard
+![Admin Dashboard](sweetshop/images/Admin_DashBoard.png)
 
-### 🛒 User Purchase
-![User Purchase](./images/User%20Purchase.png)
+## 👤 User Dashboard
+![User Dashboard](sweetshop/images/User_Dashboard.png)
+
+## 🛒 User Purchase
+![User Purchase](sweetshop/images/User_Purchase.png)
+
 
 ### 🖥️ Backend Setup (Spring Boot)
 1. Clone the repository:

@@ -1,0 +1,39 @@
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.example.sweetshop.SweetControllerTest
+
+[ERROR] Failures:
+[ERROR]   SweetControllerTest.testAddSweet:43 Status expected:<200> but was:<405>
+[INFO]
+[ERROR] Tests run: 25, Failures: 1, Errors: 0, Skipped: 0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.667 s
+[INFO] Finished at: 2025-09-26T12:08:51+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project sweetshop: There are test failures.
+[ERROR]
+[ERROR] Please refer to C:\Users\ASUS\Downloads\sweetshop\sweetshop\target\surefire-reports for the individual test results.
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+-------------------------------------------------------
+Running com.example.sweetshop.SweetshopApplicationTests
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s
+
+-------------------------------------------------------
+Results:
+-------------------------------------------------------
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.487 s
+[INFO] Finished at: 2025-09-26T12:14:46+05:30
+[INFO] ------------------------------------------------------------------------

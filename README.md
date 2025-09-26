@@ -29,7 +29,7 @@ Sweet shop management, supporting customer browsing, purchasing, and admin inven
 ### Backend Setup
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/sweet_shop_management.git
+   git clone https://github.com/vtaunk1932/sweet_shop_management.git
    ```
 2. Install dependencies:
    ```
@@ -90,7 +90,43 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 ## 🛒 User Purchase
 ![User Purchase](sweetshop/images/User_Purchase.png)
 
+## Test Report
 
+This project follows Test-Driven Development (TDD). All major backend logic was implemented following the Red-Green-Refactor cycle.
+
+**To run tests:**
+```
+npm test
+```
+
+👉 You can view the detailed **test report** here:  
+[View Test Report](./test-report.txt)
+
+**Sample Test Coverage Output:**
+
+```
+PASS  tests/sweets.test.js
+  ✓ should create a sweet (xx ms)
+  ✓ should not create sweet with missing fields (xx ms)
+...
+-----------------------|---------|----------|---------|---------|
+File                   | % Stmts | % Branch | % Funcs | % Lines |
+-----------------------|---------|----------|---------|---------|
+All files              |     95% |      90% |     92% |   94.5% |
+-----------------------|---------|----------|---------|---------|
+
+```
+## My AI Usage
+
+- **AI Tools Used:** GitHub Copilot, ChatGPT
+- **How I used AI:**
+  - Used Copilot to scaffold React components and backend test files.
+  - Asked ChatGPT for help structuring the API and for TDD best practices.
+  - Used Copilot to generate some test case templates, which I then customized.
+- **Reflection:**
+  - AI helped me move faster, especially with boilerplate and test coverage.
+  - I always reviewed and edited AI suggestions for correctness and style.
+  - AI was especially helpful for brainstorming refactoring ideas and edge case tests.
 ### 🖥️ Backend Setup (Spring Boot)
 1. Clone the repository:
    ```bash

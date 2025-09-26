@@ -3,7 +3,10 @@
 ## Project Overview
 SweetShop is a full-stack web application built using **Spring Boot (backend)** and **React (frontend)**.  
 Sweet shop management, supporting customer browsing, purchasing, and admin inventory control. Features user authentication, real-time sweet availability, and an admin dashboard for CRUD operations on sweets.
-
+---
+##Frontend Repository https://github.com/vtaunk1932/sweet_management_shop_frontend.git
+##Backend Repository https://github.com/vtaunk1932/sweet_shop_management_backend.git
+---
 **Key Features:**
 - User registration & login
 - Dashboard with sweets listing, search, filter, and purchase
